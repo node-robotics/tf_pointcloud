@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>transform_pointcloud</name>
+  <version>0.0.0</version>
+  <description>
+    Transforms the point cloud from base_link to map frame
+  </description>
+
+  <maintainer email="karthik.prakashk@node-robotics.com">Karthik Lakshmanan Prakash</maintainer>
+
+
+  <license>NODE Robotics</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+  <depend>pcl_conversions</depend>
+  <depend>pcl_ros</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf</depend>
+  <depend>roscpp</depend>
+
+</package>
