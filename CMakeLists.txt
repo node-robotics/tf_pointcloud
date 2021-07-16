@@ -9,6 +9,8 @@ set(ROS_DEPS
   sensor_msgs
   tf
   roscpp
+  laser_geometry
+  cob_scan_unifier
 )
 
 find_package(

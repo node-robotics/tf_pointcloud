@@ -55,7 +55,7 @@ int main (int argc, char** argv){
             listener.lookupTransform("map", "base_link", ros::Time(), transform);
         }
         catch (tf::TransformException ex){
-            ROS_ERROR("%s",ex.what());
+            ROS_WARN("%s",ex.what());
         }
 
         ros::spinOnce();
