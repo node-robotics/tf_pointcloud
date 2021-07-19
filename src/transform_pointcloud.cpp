@@ -48,7 +48,7 @@ int main (int argc, char** argv){
     pub = nh.advertise<sensor_msgs::PointCloud2> ("/pointcloud_unified/map_frame", 1);
 
     tf::TransformListener listener;
-    ros::Rate rate(30.0);
+    ros::Rate rate(10.0);
     while (nh.ok()){
 
         try{
