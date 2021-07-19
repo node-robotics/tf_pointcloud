@@ -15,7 +15,6 @@
 
 
   <depend>pcl_conversions</depend>
-  <depend>cob_scan_unifier</depend>
   <depend>pcl_ros</depend>
   <depend>sensor_msgs</depend>
   <depend>tf</depend>

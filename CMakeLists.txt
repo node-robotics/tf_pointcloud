@@ -10,7 +10,6 @@ set(ROS_DEPS
   tf
   roscpp
   laser_geometry
-  cob_scan_unifier
 )
 
 find_package(
@@ -29,6 +28,18 @@ include_directories(
 )
 
 
-add_executable(${PROJECT_NAME} src/${PROJECT_NAME}.cpp launch/${PROJECT_NAME}.launch)
+add_executable(${PROJECT_NAME} src/${PROJECT_NAME}.cpp)
 
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
+
+add_dependencies(transform_pointcloud ${catkin_EXPORTED_TARGETS})
+
+#############
+## Install ##
+#############
+
+install(TARGETS transform_pointcloud
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
